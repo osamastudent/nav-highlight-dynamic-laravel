@@ -1,0 +1,153 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+<style>
+   
+   .active{
+    padding:10px;    
+    border: black;
+        color: white;
+        background-image: linear-gradient(to right,  #f9e4c3,  #d9dfcf,  #d9dfcf, #1e90ff,#1e90ff);
+    }
+ 
+ 
+.active, #menu:hover{
+    background-image: linear-gradient(to right,  #ec8c69,  #f9e4c3,#1e90ff,#1e90ff);
+ 
+
+} 
+ 
+</style>
+<div id="layoutSidenav" style="background-color:#F0F0F0; margin-top:20px">
+            
+        <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+            
+                       <br><br>
+                       
+                    
+
+                       <a class="nav-link" id="menu" href="/addhomecontent">
+                               <i class="fa-solid  fa-magic"></i>
+                            adddata
+                                
+                            </a>
+
+
+                            <a class="nav-link" id="menu" href="/mainmenu">
+                               <i class="fa-solid  fa-magic"></i>
+                            add mainmenu
+                                
+                            </a>
+                            <a class="nav-link" id="menu" href="/home">
+                               <i class="fa-solid  fa-magic"></i>
+                            home
+                                
+                            </a>
+
+
+                      <a class="nav-link {{Request::is('block') ?'active' : ''}}
+                      {{Request::is('blockedit') ?'active' : ''}}
+                      {{Request::is('blocksblock') ?'active' : ''}}
+                     
+                      
+                      " id="menu" href="/block">
+                               <i class="fa-solid  fa-magic"></i>
+                               Blocks
+                                
+                            </a>
+
+
+
+                     
+
+
+
+                            
+                            <a class="nav-link {{Request::is('files') ?'active' : ''}}
+                            {{Request::is('fileeditseo')? 'active' : ''}}
+                            {{Request::is('filesuploadimages') ? 'active' : ''}} {{Request::is('filesuploaddocuments') ?'active' : ''}} {{Request::is('fileedit')?'active':''}}" id="menu" href="/files" >
+                                
+                            
+                            <i class="fa-solid fa-file"></i>  &nbsp   Files
+                                
+                         
+                            </a>
+
+
+
+
+
+
+
+                             
+                            <a class="nav-link {{Request::is('navigation') ?'active' : ''}} 
+                            {{Request::is('navigationlinkpage')?'active':''}}
+
+                            
+
+                            {{Request::is('navigationlinkurl')?'active':''}}
+                            {{Request::is('navigationedit') ? 'active' : ''}} {{Request::is('navigationlink')? 'active':''}}" href="navigation" id="menu">
+                                
+                                <i class="fa-solid fa-link"></i>  &nbsp Navigations
+                                
+                         
+                            </a>
+
+                           
+                           
+                          
+
+                            
+                            <a id="menu" href="/pages" class="nav-link {{Request::is('pages') ?'active' : ''}} {{Request::is('pagesnewpagedefaultpageseo') ?'active' : ''}}
+                            
+                            {{Request::is('pagesnewpagedefaultpage')?'active':''}}
+                            {{Request::is('pagesnewpagedefaultpageseo')?'active':''}}
+
+                            {{Request::is('pagesnewpagedefaultpageoption')?'active':''}}
+                            {{Request::is('pagesnewpageinternalpage')?'active':''}}
+                            {{Request::is('pagesnewpageinternalseo')?'active':''}}
+                            {{Request::is('pagesnewpageinternaloption')?'active':''}}
+                            {{Request::is('pagesnewpagestaticpage')?'active':''}}
+                         
+                         
+                            {{Request::is('pagesnewpagestaticpageseo')?'active':''}}
+
+
+                            {{Request::is('pagenewpagestaticpageoption')?'active':''}}
+                           
+                            
+                            "  >
+                                
+                            <i class="fas fa-book-open"></i>
+                            &nbsp  Pages
+                                                              
+                         
+                            </a>
+
+
+
+                         
+                            
+
+                             
+                            <a id="menu" class="nav-link {{Request::is('users') ?'active' : ''}}
+                            {{Request::is('usersedit')? 'active' :''}}
+                            " href="/users" >
+                                
+                            <i class="fa-solid fa-users"></i>
+                           &nbsp Users
+                                                              
+                         
+                            </a>
+                            
+                         
+                </nav>
+            </div>
+
+
+
+            <div id="layoutSidenav_content">
